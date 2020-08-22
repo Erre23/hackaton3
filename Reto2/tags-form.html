@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 3</title>
+    <style>
+        .form{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .table-form{
+            width: 100%;
+        }
+        .col-50{
+            width: 50%;
+            padding-right: 10px;
+        }
+        .label {
+            display: block;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+        }
+        .form-control-center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HACKATON 3 - RETO 2</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">MENU PRINCIPAL</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form class="form" action="#">
+            <div>
+                <fieldset title="Datos Personales">
+                    <legend>Datos Personales</legend>
+                    <table class="table-form">
+                        <tr>
+                            <td class="col-50">
+                                <label class="label" for="nombre">Nombre</label>
+                                <input class="form-control" type="text" id="nombre" name ="nombre" placeholder="Nombre" />
+                            </td>
+                            <td  class="col-50">
+                                <label class="label" for="apellido">Apellido</label>
+                                <input class="form-control"  type="text" id="apellido" name="apellido" placeholder="Apellido" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="col-50">
+                                <label class="label" for="edad">Edad</label>
+                                <input class="form-control"  type="number" max="100" min="0" id="edad" name="edad" placeholder="Edad" />
+                            </td>
+                            <td class="col-50">
+                                <label class="label" for="email">Email</label>
+                                <input class="form-control"  type="email" id="email" name="email" placeholder="Email" />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset title="Indica tus preferencias">
+                    <legend>Indica tus preferencias</legend>
+                    <div>
+                        <label class="label" for="browser" >Indica tu explorador
+                            <input class="form-control" list="browsers" id="browser" name="browser" />
+                        </label>
+                        <datalist id="browsers">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                            <option value="Internet Explorer">
+                            <option value="Opera">
+                            <option value="Safari">
+                            <option value="Microsoft Edge">
+                        </datalist>
+                    </div>
+                    <div>
+                        <label class="label" for="horario" >Indica tu horario</label>
+                        <select class="form-control" id="horario" name="horario">
+                            <option value="value1">8am => 12pm</option> 
+                            <option value="value2" selected>12pm => 4pm</option>
+                            <option value="value3">4pm => 8pm</option>
+                        </select>
+                    </div>
+                </fieldset>
+            </div>
+            <div>
+                <button class="form-control-center" type="submit" >Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
