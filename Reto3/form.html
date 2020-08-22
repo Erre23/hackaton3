@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton 3</title>
+    <style>
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .form{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .table-form{
+            width: 100%;
+        }
+        .container {
+            border-color: rgb(55, 55, 255);
+            border-style: solid;
+            border-width: 2px;
+            color: blue;
+            font-weight: bold;
+            padding: 5px;
+        }
+        .col-50{
+            width: 50%;
+        }
+        .col-100{
+            width: 100%;
+        }
+        .label {
+            display: block;
+            color: black;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            margin-right: 4px;
+        }
+        .form-control:focus
+        {
+            border: 2px solid rgb(55, 55, 253);
+            background: khaki;
+        }
+        .form-control-center {
+            margin: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .form-button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HACKATON 3 - RETO 3</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">MENU PRINCIPAL</a></li>
+        </ul>
+    </nav>
+    <main>
+        <form class="form" action="#">
+            <div>
+                <fieldset class="container" title="Datos Personales">
+                    <legend>Datos Personales</legend>
+                    <table class="table-form">
+                        <tr >
+                            <td class="col-50">
+                                <label class="label" for="nombre">Nombre</label>
+                                <input class="form-control" type="text" id="nombre" name ="nombre" placeholder="Nombre" required />
+                            </td>
+                            <td  class="col-50">
+                                <label class="label" for="apellido">Apellido</label>
+                                <input class="form-control"  type="text" id="apellido" name="apellido" placeholder="Apellido" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td  class="col-50">
+                                <label class="label" for="edad">Edad</label>
+                                <input class="form-control"  type="number" min="18" max="80" id="edad" name="edad" placeholder="Edad" title="Ingrese su edad en un rango de 18 a 80 años" required />
+                            </td>
+                            <td class="col-50">
+                                <label class="label" for="dni">DNI</label>
+                                <input class="form-control" type="text" minlength="8" maxlength="9" pattern="[0-9]{8}[A-Z0-9]*" id="dni" name="dni" placeholder="DNI" title="El Dni debe tener como mínimo 8 digitos númericos + un 9 digito (opcional) que es el dígito veririficador y puede ser un número o una letra y debe ir al final" required />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-100" colspan="2">
+                                <label class="label" for="email">Email</label>
+                                <input class="form-control"  type="email" id="email" name="email" placeholder="Email" title="Ingrese un email valido, ejemplo: ninombre@dominio.com" required />
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            <div>
+                <button class="form-control-center form-button" type="submit" >Enviar</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
